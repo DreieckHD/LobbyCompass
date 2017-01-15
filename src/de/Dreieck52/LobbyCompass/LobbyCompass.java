@@ -7,7 +7,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class LobbyCompass extends JavaPlugin {
 
-	public static String prefix = "§f[§eCompass§f] ";
+	public static String prefix = "Â§f[Â§eCompassÂ§f] ";
 	
 	public static String use_Permission = "lobbycompass.use";
 	public static String get_Permission = "lobbycompass.get";
@@ -39,24 +39,24 @@ public class LobbyCompass extends JavaPlugin {
 		getConfig().addDefault("get-compass-worlds", new String[] { "world", "world_nether", "world_the_end" });
 		getConfig().addDefault("only-allow-command-lc_get-in-worlds", true);
 		getConfig().addDefault("can-drop-compass", false);
-		getConfig().addDefault("inventory-lines-amount", 4);
+		getConfig().addDefault("inventory-lines-amount", 5);
 		getConfig().addDefault("sound-effect", true);
 		
 		getConfig().addDefault("options", new String[] { "spawn", "pvp" });
 		
-		getConfig().addDefault("data.spawn.name", "&e&lSpawn / Lobby");
-		getConfig().addDefault("data.spawn.lore", new String[] { "&7Click this Item to execute command", "&8&l/warp spawn", "&7another line :D" });
-		getConfig().addDefault("data.spawn.item", 2);
+		getConfig().addDefault("data.spawn.name", "&e&lSpawn");
+		getConfig().addDefault("data.spawn.lore", new String[] { "&7Teleport back to spawn", "&8&l/warp spawn" });
+		getConfig().addDefault("data.spawn.item", 347);
 		getConfig().addDefault("data.spawn.cmd", "warp spawn");
 		getConfig().addDefault("data.spawn.executedByPlayer", true);
-		getConfig().addDefault("data.spawn.position-in-inventory", 10);
+		getConfig().addDefault("data.spawn.position-in-inventory", 22);
 		
-		getConfig().addDefault("data.pvp.name", "&c&lPvP Zone");
-		getConfig().addDefault("data.pvp.lore", new String[] { "&cD&ei&as&bc&do", "&8&l/pvp <player> join" });
+		getConfig().addDefault("data.pvp.name", "&c&lSurvival Games");
+		getConfig().addDefault("data.pvp.lore", new String[] { "&cD&ei&as&bc&do", "&8&lCompete with friends or foes in this thrilling game" });
 		getConfig().addDefault("data.pvp.item", 267);
-		getConfig().addDefault("data.pvp.cmd", "pvp %n% join");
-		getConfig().addDefault("data.pvp.executedByPlayer", false);
-		getConfig().addDefault("data.pvp.position-in-inventory", 19);
+		getConfig().addDefault("data.pvp.cmd", "warp survivalgames");
+		getConfig().addDefault("data.pvp.executedByPlayer", true);
+		getConfig().addDefault("data.pvp.position-in-inventory", 20);
 		
 		getConfig().options().copyHeader(true);
 		getConfig().options().copyDefaults(true);
